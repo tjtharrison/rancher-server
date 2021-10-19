@@ -1,0 +1,10 @@
+version: '3'
+services:
+    rancher:
+        image: rancher/rancher
+        ports:
+            - '443:443'
+        restart: always
+        container_name: rancher-server
+        volumes:
+            - '/data/rancher/:/var/lib/rancher'
